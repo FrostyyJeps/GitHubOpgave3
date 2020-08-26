@@ -61,17 +61,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
 
-        $(".bfSideMenu").mouseenter(function (){
-            $(".bfSideMenu .overlay").animate({
+        let bfSideMenu = $(".bfSideMenu");
+        let bfSideMenuOverlay = $(".bfSideMenu .overlay");
+
+        $(bfSideMenu).mouseenter(function (){
+            $(bfSideMenuOverlay).animate({
                 width: "45vh"
             })
-            $(".bfSideMenu .overlay").css({
+            $(bfSideMenuOverlay).css({
                 "grid-template-columns": "7vh, 38vh",
                 "color": "white",
                 // "background-color": "rgba(0, 0, 0, 0.8)"
             })
 
-            $(".bfSideMenu .overlay").css({
+            $(bfSideMenuOverlay).css({
                 "background-color": "rgba(0, 0, 0, 0.8)"
             })
 
@@ -92,11 +95,11 @@
             // })
         })
 
-        $(".bfSideMenu").mouseleave(function (){
-            $(".bfSideMenu .overlay").animate({
+        $(bfSideMenu).mouseleave(function (){
+            $(bfSideMenuOverlay).animate({
                 width: "7vh"
             })
-            $(".bfSideMenu .overlay").css({
+            $(bfSideMenuOverlay).css({
                 "background-color": "rgba(0, 0, 0, 0.5)"
             })
         })
