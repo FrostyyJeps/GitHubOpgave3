@@ -32,3 +32,107 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+.bfTopMenu{
+	width: 100%;
+	height: 7vh;
+	position: fixed;
+	background-image: url("../images/topbarBG.png");
+	/*background-image: url("../images/bflogoWhite.png");*/
+}
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.topbarlogowrap{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.topbarlogowrap h1{
+	font-family: Georgia, serif;
+	font-weight: normal;
+	color: white;
+	margin-right: 1%;
+	margin-bottom: 0.65%;
+	font-size: 3rem;
+}
+
+.line1{
+	height: 2px;
+	width: 55%;
+	background-color: white;
+	opacity: 80%;
+	position: absolute;
+	left: 0;
+	bottom: 15%;
+}
+
+.line2{
+	height: 2px;
+	width: 42%;
+	background-color: white;
+	opacity: 80%;
+	position: absolute;
+	right: 0;
+	bottom: 15%;
+}
+
+.bfSideMenu{
+	width: 7vh;
+	height: 93vh;
+	position: fixed;
+	bottom: 0;
+	background-image: url("../images/sidebarBG.png");
+}
+
+.logoWrap{
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
