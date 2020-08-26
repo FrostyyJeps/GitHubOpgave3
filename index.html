@@ -11,16 +11,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-    <body>
+<body>
+    <div class="bfTopMenu">
+        <div class="overlay">
+            <div class="topbarlogowrap">
+                <h1>Benefactor</h1>
+                <img src="images/bflogoWhite.png" alt="BenefactorLogo">
+            </div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+    </div>
+
+    <div class="bfSideMenu">
+        <div class="overlay">
+<!--            <div class="space"></div>-->
+            <img class="homeIcon top" src="images/iconHome.png" alt="BenefactorLogo">
+            <img class="homeIcon bot" src="images/iconHomeOutline.png" alt="BenefactorLogo">
+
+            <img class="bookIcon top" src="images/iconBook.png" alt="BenefactorLogo">
+            <img class="bookIcon bot" src="images/iconBookOutline.png" alt="BenefactorLogo">
+
+            <img class="wrenchIcon top" src="images/iconWrench.png" alt="BenefactorLogo">
+            <img class="wrenchIcon bot" src="images/iconWrenchOutline.png" alt="BenefactorLogo">
+
+            <img class="phoneIcon top" src="images/iconPhone.png" alt="BenefactorLogo">
+            <img class="phoneIcon bot" src="images/iconPhoneOutline.png" alt="BenefactorLogo">
 
 
-        
+            <p class="homeLine">Home</p>
+            <p class="bookLine">Models</p>
+            <p class="wrenchLine">Book service</p>
+            <p class="phoneLine">Contact us</p>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
+            <div class="slideMenu">
+<!--                <p>Hej</p>-->
+<!--                <p>med</p>-->
+<!--                <p>dig</p>-->
+<!--                <p>Jens</p>-->
+            </div>
+        </div>
+    </div>
+    
+    <header class="bfHeaderWrapper">
+        <img src="images/headerimg.png" alt="SterlingGTHeaderImage">
+    </header>
 
-        </script>
 
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        let bfSideMenu = $(".bfSideMenu");
+        let bfSideMenuOverlay = $(".bfSideMenu .overlay");
+
+        $(bfSideMenu).mouseenter(function (){
+            $(bfSideMenuOverlay).animate({
+                width: "45vh"
+            })
+            $(bfSideMenuOverlay).css({
+                "grid-template-columns": "7vh, 38vh",
+                "color": "white",
+                // "background-color": "rgba(0, 0, 0, 0.8)"
+            })
+
+            $(bfSideMenuOverlay).css({
+                "background-color": "rgba(0, 0, 0, 0.8)"
+            })
+
+            $(".overlay p").css({
+                "display": "block"
+            })
+            // $(".homeLine").css({
+            //     "grid-column": "2/3"
+            // })
+            // $(".bookLine").css({
+            //     "grid-column": "2/3"
+            // })
+            // $(".wrenchLine").css({
+            //     "grid-column": "2/3"
+            // })
+            // $(".phoneLine").css({
+            //     "grid-column": "2/3"
+            // })
+        })
+
+        $(bfSideMenu).mouseleave(function (){
+            $(bfSideMenuOverlay).animate({
+                width: "7vh"
+            })
+            $(bfSideMenuOverlay).css({
+                "background-color": "rgba(0, 0, 0, 0.5)"
+            })
+        })
+
+        // $(".bfSideMenu").mouseenter(function (){
+        //     $(".bfSideMenu .overlay").css("width", "21vh")
+        // })
+        //
+        // $(".bfSideMenu").mouseleave(function (){
+        //     $(".bfSideMenu .overlay").css("width", "7vh")
+        // })
+
+    </script>
+
+</body>
 
 </html>
