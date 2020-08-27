@@ -170,136 +170,147 @@ img {
 	grid-row: 5/6;
 }
 
-.productTitle {
-	font-size: 40px;
-	text-align: center;
-	padding-top: 8vh;
-	font-family: 'News Cycle', sans-serif;
-	font-weight: bold;
-}
-
-.product-container {
-	display: grid;
-	grid-template-columns: 570px 570px 570px;
-	grid-template-rows: 321px 321px 321px 321px 321px;
-	gap: 28px 28px;
-	margin-left: 7vh;
-	padding-top: 2.5vh;
-	font-family: 'News Cycle', sans-serif;
-}
-
-.product-container div {
+.models{
 	width: 100%;
 	height: auto;
+	padding: 100px 7vh 0 7vh;
+	text-align: center;
+	font-family: 'News Cycle', sans-serif;
+	font-size: 40px;
 }
-
-.product-container div h2, div h3 {
-	padding: 0;
+ 
+.models h2{
+	margin-bottom: 3vh;
+	font-weight: bold;
+}
+ 
+.modelsGrid{
+	display: grid;
+	grid-column-gap: 3.5vh;
+	grid-row-gap: 3.5vh;
+	grid-template-columns: repeat(3, 1fr);
+}
+ 
+.modelsGrid div h2, h3{
 	margin: 0;
+	color: white;
+	text-align: left;
+	padding-left: 7px;
+	align-content: center;
 	font-weight: 500;
-	margin: 15px 0 0 10px;
+	padding-bottom: 2px;
 }
-
-.product1 {
-	grid-column: 1/2;
-	grid-row: 1/2;
-	background-image: url(../images/Feltzer.png);
+ 
+.modelsGrid div h2 {
+	font-size: 30px;
+	line-height: 30px;
+}
+.modelsGrid div h3{
+	font-size: 15px;
+	line-height: 15px;
+}
+ 
+.modelsGrid div{
 	background-size: 100%;
 	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	line-height: 0.2;
+	display: grid;
+	height: 330px;
 }
 
-.product1 div {
-	color: white;
-	height: 53px;
-	width: 553px;
-	background-color: rgba(0, 0, 0, 0.6);
-	margin-top: 7px;
+.schafterModel{
+	background-image: url("../images/schafterTemp.png");
+	background-size: 150% !important;
+	background-position: center;
 }
 
-.product1 h2 {
-	font-size: 30px;
+.dubstaModel{
+	background-image: url("../images/Dubsta.png");
 }
 
-.product1 h3 {
-	font-size: 15px;
+.dubsta6x6Model{
+	background-image: url("../images/Dubsta\ 6x6.png");
+}
+ 
+.feltzerModel{
+	background-image: url("../images/Feltzer.png");
 }
 
-.productCTA {
-	bottom: 7px;
+.schlagenModel{
+	background-image: url("../images/SchlagenGT.png");
+}
+ 
+.glendaleModel{
+	background-image: url("../images/Glendale.png");
+}
+ 
+.pantoModel{
+	background-image: url("../images/Panto.png");
+}
+ 
+.xlsModel{
+	background-image: url("../images/XLS.png");
+}
+
+.surranoModel{
+	background-image: url("../images/Surrano.png");
+}
+
+.schwarztModel{
+	background-image: url("../images/Schwartzer.png");
+}
+
+.streiterModel{
+	background-image: url("../images/Streiter2.png");
+}
+
+.stirlingModel{
+	background-image: url("../images/Stirling\ GT.png");
+}
+ 
+.xlsAModel{
+	background-image: url("../images/XLS\ Armored.png");
+}
+
+.turretModel{
+	background-image: url("../images/Turret\ Limo.png");
+}
+
+.terrorModel{
+	background-image: url("../images/Terrorbyte.png");
+}
+ 
+.topBox{
+	background-color: rgba( 0, 0, 0, 0.6);
+	width: 569px !important;
+	height: 53px !important;
+	margin: 7px !important;
+}
+ 
+.botBox{
+	background-color: rgba( 0, 0, 0, 0.6);
 	width: 149px !important;
 	height: 36px !important;
-	align-self: flex-end;
-	margin-bottom: 7px;
-	text-align: center;
+	margin: 7px !important;
+	align-self: end;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
 }
 
-.productCTA h2{
+.botBox:hover h3 {
+	color: orange;
+}
+ 
+.botBox h3{
 	font-size: 16px;
-}
-
-.product2 {
-	grid-column: 2/3;
-	grid-row: 1/5;
-}
-
-.product3 {
-	grid-column: 3/3;
-	grid-row: 1/3;
-}
-
-.product4 {
-	grid-column: 1/2;
-	grid-row: 2/5;
-}
-
-.product5 {
-	grid-column: 2/2;
-	grid-row: 2/5;
-}
-
-.product6 {
-	grid-column: 3/3;
-	grid-row: 2/5;
-}
-
-.product7 {
-	grid-column: 1/2;
-	grid-row: 3/5;
-}
-
-.product8 {
-	grid-column: 2/2;
-	grid-row: 3/5;
-}
-
-.product9 {
-	grid-column: 3/3;
-	grid-row: 3/5;
-}
-
-.product10 {
-	grid-column: 1/2;
-	grid-row: 4/5;
-}
-
-.product11 {
-	grid-column: 2/2;
-	grid-row: 4/5;
-}
-
-.product12 {
-	grid-column: 3/3;
-	grid-row: 4/5;
+	font-weight: 500;
+	align-self: center;
+	padding: 0;
 }
 
 
 .spaceboi {
 	height: 666px;
-	
 }
 
 
