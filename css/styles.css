@@ -1,4 +1,4 @@
-* { 
+*{ 
     box-sizing: border-box; 
 }
 
@@ -147,6 +147,7 @@ img {
 	display: none;
 	font-size: 3rem;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
 }
 
 .homeLine{
@@ -168,31 +169,3 @@ img {
 	grid-column: 2/3;
 	grid-row: 5/6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
