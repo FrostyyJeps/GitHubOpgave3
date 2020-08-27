@@ -1,5 +1,5 @@
 *{ 
-    box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 body {
@@ -148,7 +148,7 @@ img {
 	font-size: 3rem;
 	font-family: "Open Sans Light", serif;
 	font-weight: lighter;
-	text-decoration: none;
+	text-decoration:none;
 }
 
 .overlay a:visited{
