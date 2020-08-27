@@ -146,7 +146,7 @@ img {
 .overlay p{
 	display: none;
 	font-size: 3rem;
-	font-family: "Open Sans Light", serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .homeLine{
