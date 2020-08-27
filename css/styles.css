@@ -158,6 +158,8 @@ img {
 .overlay a:hover{
 	color: orange;
 	pointer-events: none;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
 .homeLine{
