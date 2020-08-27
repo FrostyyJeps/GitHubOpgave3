@@ -308,8 +308,44 @@ img {
 	padding: 0;
 }
 
+.map h2{
+	text-align: center;
+	font-size: 2em;
+	font-family: 'News Cycle', sans-serif;
+	font-weight: bold;
+	margin: 5vh 0 1vh 0;
+}
 
+.map img {
+	max-width: 50%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
 
+.map h4{
+	text-align: center;
+	font-size: 1em;
+	font-family: 'News Cycle', sans-serif;
+	font-weight: 500;
+	color: black;
+	margin: 2vh 0 3vh 0;
+	font-style: italic;
+}
+
+.line3{
+	height: 2px;
+	width: 42%;
+	background-color: black;
+	position: absolute;
+	right: 0;
+	bottom: 15%;
+}
+
+.bottomHR {
+	border: solid black 1px;
+	margin: 60px 200px 40px 200px;
+}
 
 
 
