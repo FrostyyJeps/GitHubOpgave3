@@ -182,6 +182,255 @@ img {
 	grid-column: 2/3;
 	grid-row: 5/6;
 }
+/*---------------------------------------------------   MAPS   ---------------------------------------------------*/
+
+/*---------------------------------------------------   PRODUCT   ---------------------------------------------------*/
+
+.product{
+	display: grid;
+	grid-template-columns: 1150px 690px;
+	padding-top: 7vh;
+}
+
+.product h1{
+	font-family: 'News Cycle', sans-serif;
+	font-size: 58px;
+	padding-left: 10vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+
+.schafterWrap{
+	grid-row: 2/3;
+	background-image: url("../images/Schafter_Black.png");
+	background-position: center;
+	width: 1150px;
+	height: 647px;
+}
+
+.customization{
+	grid-column: 2/3;
+	grid-row: 1/8;
+	/*display: grid;*/
+	font-family: 'News Cycle', sans-serif;
+	padding: 59px;
+}
+
+.totalsum, .sumUpgrades, .carPrice{
+	text-align: right;
+}
+
+.totalSumValue, .sumValue, .carValue{
+	text-align: right;
+	padding-right: 2vw;
+}
+
+.cashBit{
+	display: grid;
+	grid-template-columns: 3fr 2fr 1fr;
+	align-content: center;
+	grid-row: 1/2;
+}
+
+.totalsum{
+	grid-column: 1/2;
+	font-size: 25px;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.totalSumValue{
+	grid-column: 2/3;
+	font-size: 25px;
+	/*padding-right: 5vw;*/
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.sumUpgrades{
+	grid-column: 1/2;
+}
+
+.sumValue{
+	grid-column: 2/3;
+}
+
+.carPrice{
+	grid-column: 1/2;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.carValue{
+	grid-column: 2/3;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.shoppingcart{
+	grid-column: 3/4;
+	grid-row: 1/4;
+	align-self: end;
+	justify-self: center;
+}
+
+.shoppingcart img{
+	width: 80%;
+}
+
+
+
+
+
+.colours{
+	grid-row: 2/3;
+}
+
+.coloursh3{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.coloursh3 img{
+	height: 100%;
+	width: auto;
+}
+
+.coloursh3 h3{
+	font-size: 25px;
+	margin-top: 2vh;
+	line-height: 25px;
+	margin-bottom: 1vh;
+}
+
+.colours p, .bodykits p{
+	font-size: 20px;
+	margin-top: 2vh;
+}
+
+.bodykit{
+	border-top: #A9A9A9 solid 1px;
+	margin-top: 5vh;
+}
+
+.bodykits{
+	padding-bottom: 3vh;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.neutral{
+	margin-top: 0 !important;
+}
+
+.colorGrid{
+	display: grid;
+	grid-template-columns: 81px 81px 81px 81px 230px;
+	grid-template-rows: 74px;
+}
+
+.colorGrid div{
+	height: 74px;
+	width: 74px;
+	padding: 0;
+	margin: 0 6px 0 0;
+}
+
+.colorGrid p{
+	grid-column: 5/6;
+	text-align: right;
+	line-height: 74px;
+	font-size: 20px;
+	align-self: center;
+}
+
+.neutral{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.blackwhite{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+.black{
+	background-color: black;
+}
+
+.white{
+	border: #CFCFCF solid 1px;
+}
+
+.metallic{
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+
+.actualcolors{
+	grid-column: 1/2;
+}
+
+.blue{
+	background-color: #0000ff;
+}
+
+.red{
+	background-color: #ff0000;
+}
+
+.orange{
+	background-color: #ffa500;
+}
+
+.green{
+	background-color: #008000;
+}
+
+.chrome{
+	background-color: #F2F2F2;
+	border: #CFCFCF solid 1px;
+}
+
+.gold{
+	background-color: #D4C786;
+}
+
+.silver{
+	background-color: #F6F6F6;
+}
+
+/*.colorGrid img{*/
+/*	position: absolute;*/
+/*}*/
+
+/*.checkmark{*/
+/*	clip-path: polygon(27% 54%, 40% 67%, 76% 18%, 86% 29%, 40% 89%, 17% 64%);*/
+/*}*/
+
+.bodykitP{
+	align-self: center;
+	line-height: 74px;
+}
+
+
+
+.buynow{
+	width: 435px;
+	height: 57px;
+	border: #707070 solid 2px;
+	margin-top: 3vh;
+	margin-left: 76px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 25px;
+}
+
+.buynow img{
+	height: 50%;
+	width: auto;
+}
+
+
+/*---------------------------------------------------   PRODUCT   ---------------------------------------------------*/
 
 /*---------------------------------------------------   MAPS   ---------------------------------------------------*/
 .map h2{

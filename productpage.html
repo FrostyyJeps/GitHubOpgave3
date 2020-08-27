@@ -40,8 +40,8 @@
             <img class="phoneIcon bot" src="images/iconPhoneOutline.png" alt="BenefactorLogo">
 
 
-            <a href="#home" class="homeLine">Home</a>
-            <a href="products.html" class="bookLine">Models</a>
+            <a href="index.html" class="homeLine">Home</a>
+            <a href="productpage.html" class="bookLine">Models</a>
             <a href="#" class="wrenchLine">Book service</a>
             <a href="#contactSection" class="phoneLine">Contact us</a>
 
@@ -49,7 +49,99 @@
 
     </div>
 
-    <div class="product"></div>
+    <div class="product">
+        <h1>Schafter</h1>
+
+        <div class="schafterWrap"></div>
+
+        <div class="customization">
+            <div class="cashBit">
+                <p class="totalsum">Total Sum:</p>
+                <p class="totalSumValue">noice</p>
+                <p class="sumUpgrades">Sum of upgrades:</p>
+                <p class="sumValue"> cheapskate</p>
+                <p class="carPrice">Base price:</p>
+                <p class="carValue">$ 208,000 USD</p>
+                
+                <a class="shoppingcart" href="#"><img src="images/shoppingcart.png" alt="cart"></a>
+            </div>
+
+            <div class="coloursh3" id="colourID">
+                <h3>Colors</h3>
+                <img src="images/dropdown.png" alt="dropdown">
+            </div>
+
+            <div class="colours">
+<!--                <h3>Colors</h3>-->
+
+                <p class="neutral">Neutral</p>
+
+                <div class="colorGrid blackwhite" >
+                    <div class="black"></div>
+                    <div class="white"></div>
+                    <p>Free</p>
+                </div>
+
+                <p class="metallic">Metallic</p>
+
+                <div class="colorGrid actualcolors">
+                    <div class="blue"></div>
+                    <div class="red"></div>
+                    <div class="orange"></div>
+                    <div class="green"></div>
+                    <p>$ 2,500 USD</p>
+                </div>
+
+                <p class="specialCol">Special colors</p>
+
+                <div class="colorGrid specialcolors">
+                    <div class="chrome"></div>
+                    <div class="gold"></div>
+                    <div class="silver"></div>
+                    <p>$ 25,000 USD</p>
+                </div>
+
+            </div>
+
+            <div class="coloursh3 bodykit" id="bodykitID">
+                <h3>Bodykits</h3>
+                <img src="images/dropdown.png" alt="dropdown">
+            </div>
+
+            <div class="bodykits">
+
+                <p class="specialCol">Standard Package</p>
+
+                <div class="colorGrid">
+                    <div class="white"></div>
+                    <p class="bodykitP">Free</p>
+                </div>
+
+                <p class="specialCol">Sports Package</p>
+
+                <div class="colorGrid">
+                    <div class="white"></div>
+                    <p class="bodykitP">$ 20,000 USD</p>
+                </div>
+
+                <p class="specialCol">Armored Package</p>
+
+                <div class="colorGrid">
+                    <div class="white"></div>
+                    <p class="bodykitP">$ 75,000 USD</p>
+                </div>
+
+            </div>
+
+            <a href="checkout.html" class="buynow">
+                <h2>BUY YOUR &nbsp;</h2>
+                <img src="images/benefactorlogoblack.png" alt="logo">
+                <h2>&nbsp; NOW</h2>
+            </a>
+
+        </div>
+
+    </div>
 
 
     <div class="map">
@@ -125,6 +217,64 @@
                 }
             });
         }
+
+        $("#colourID").click(function (){
+            $(".colours").slideToggle();
+        });
+
+        $("#bodykitID").click(function (){
+            $(".bodykits").slideToggle();
+        });
+
+        // let white = $(".white");
+        // let black = $(".black");
+        // let blue = $(".blue");
+        // let red = $(".red");
+        // let orange = $(".orange");
+        // let green = $(".green");
+        //
+        //
+        //
+        // $(white).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        // $(black).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        // $(blue).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        // $(red).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        // $(orange).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        // $(green).mouseenter(function (){
+        //     $(this).addClass("checkmark");
+        // })
+        //
+        // $(white).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+        // $(black).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+        // $(blue).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+        // $(red).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+        // $(orange).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+        // $(green).mouseleave(function (){
+        //     $(this).removeClass("checkmark");
+        // })
+
+
+
 
         let bfSideMenu = $(".bfSideMenu");
         let bfSideMenuOverlay = $(".bfSideMenu .overlay");
