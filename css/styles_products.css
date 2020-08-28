@@ -1,4 +1,4 @@
-*{ 
+* { 
     box-sizing: border-box; 
 }
 
@@ -160,6 +160,7 @@ img {
 	color: orange;
 	pointer-events: none;
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 .homeLine{
@@ -181,219 +182,346 @@ img {
 	grid-column: 2/3;
 	grid-row: 5/6;
 }
+/*---------------------------------------------------   MAPS   ---------------------------------------------------*/
 
-/*---------------------------------------------------   MODELS   ---------------------------------------------------*/
+/*---------------------------------------------------   PRODUCT   ---------------------------------------------------*/
 
-.models{
-	width: 100%;
-	height: auto;
-	padding: 0 7vh 0 7vh;
-	margin-top: 7vh;
-	text-align: center;
+.product{
+	display: grid;
+	grid-template-columns: 1150px 690px;
+	padding-top: 7vh;
+}
+
+.product h1{
 	font-family: 'News Cycle', sans-serif;
-	font-size: 40px;
+	font-size: 58px;
+	padding-left: 10vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
 }
 
-.models h2{
-	margin-bottom: 3vh;
-	font-weight: bold;
-	color: #4F4F4F;
-}
-
-.modelsGrid{
-	display: grid;
-	/*grid-column-gap: 3.5vh;*/
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.modelsGrid div h2, h3{
-	margin: 0;
-	color: white;
-	text-align: left;
-	padding-left: 7px;
-	align-content: center;
-	font-weight: 500;
-	padding-bottom: 2px;
-}
-
-.modelsGrid div h2 {
-	font-size: 30px;
-	line-height: 30px;
-}
-.modelsGrid div h3{
-	font-size: 15px;
-	line-height: 15px;
-}
-
-.modelsGrid div{
-	background-size: 100%;
-	background-repeat: no-repeat;
-	display: grid;
-	height: 330px;
-}
-/*---------------------------------------------------   MODELS   ---------------------------------------------------*/
-
-
-/*---------------------------------------------------   OFFERS   ---------------------------------------------------*/
-.dubstaModel{
-	background-image: url("../images/Dubsta.png");
-}
-
-.feltzerModel{
-	background-image: url("../images/Feltzer.png");
-}
-
-.glendaleModel{
-	background-image: url("../images/Glendale.png");
-}
-
-.pantoModel{
-	background-image: url("../images/Panto.png");
-}
-
-.schafterModel{
-	background-image: url("../images/Schafter_Black.png");
-	background-size: 150% !important;
+.schafterWrap{
+	grid-row: 2/3;
+	/*background-image: url("../images/Schafter_Black.png");*/
 	background-position: center;
+	width: 1150px;
+	height: 647px;
 }
 
-.xlsModel{
-	background-image: url("../images/XLS.png");
+.schafterWrap img{
+	object-position:;
 }
 
-.topBox{
-	background-color: rgba( 0, 0, 0, 0.6);
-	width: 569px !important;
-	height: 53px !important;
-	margin: 7px !important;
-}
-
-.botBox{
-	background-color: rgba( 0, 0, 0, 0.6);
-	width: 149px !important;
-	height: 36px !important;
-	margin: 7px !important;
-	align-self: end;
-	display: flex;
-	justify-content: center;
-}
-
-.botBox:hover h3{
-	color: orange;
-	pointer-events: none;
-}
-
-.botBox h3{
-	font-size: 16px;
-	font-weight: 500;
-	align-self: center;
-	padding: 0;
-}
-
-.fancyOffersH1{
-	text-align: center;
+.customization{
+	grid-column: 2/3;
+	grid-row: 1/8;
+	/*display: grid;*/
 	font-family: 'News Cycle', sans-serif;
-	margin-top: 7vh;
-	margin-bottom: 0;
-	font-size: 60px;
-	color: #4F4F4F;
+	padding: 59px;
 }
 
-.fancyOffers{
+.totalsum, .sumUpgrades, .carPrice{
+	text-align: right;
+}
+
+.totalSumValue, .sumValue, .carValue{
+	text-align: right;
+	padding-right: 2vw;
+}
+
+.cashBit{
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(5, 680px);
-	padding: 0 7vh;
-	font-family: 'News Cycle', sans-serif;
-	color: #2B2B2B;
+	grid-template-columns: 3fr 2fr 1fr;
+	align-content: center;
+	grid-row: 1/2;
 }
 
-.fancyOffers h3{
-	padding: 1rem 0;
-	color: #4A4A4A;
-	font-weight: 700;
-	font-size: 20px;
-	margin: 0;
-	line-height: 20px;
+.totalsum{
+	grid-column: 1/2;
+	font-size: 22px;
+	border-bottom: #A9A9A9 solid 1px;
 }
 
-.fancyOffers h2{
-	color: #2E2E2E;
-	font-size: 37px;
-	margin: 0;
-	padding-top: 1rem;
-	font-weight: bold;
-	line-height: 37px;
+.totalSumValue{
+	grid-column: 2/3;
+	font-size: 22px;
+	/*padding-right: 5vw;*/
+	border-bottom: #A9A9A9 solid 1px;
 }
 
-.fancyOffers h4{
-	color: #4A4A4A;
-	font-size: 20px;
-	margin: 0;
-	padding-top: 1rem;
-	line-height: 27px;
-}
-
-.fancyOffers p{
-	color: #4A4A4A;
-	font-size: 20px;
-	margin: 0;
-	padding-top: 1rem;
-	line-height: 27px;
-}
-
-.offerButton{
-	display: inline-block;
-	color: white;
-	padding: 0.7rem;
-	margin-top: 3rem;
-	background-color: rgba(0, 0, 0, 0.6);
-	border-radius: 2px;
-}
-
-
-.stirling, .terrorbyte, .krieger{
-	display: grid;
-	grid-template-columns: 60% 40%;
-	grid-template-rows: 1fr;
-	padding: 7vh;
-}
-
-.terrorbyte h3{
-	padding: 0 !important;
-}
-
-.stirling img, .terrorbyte img, .krieger img {
+.sumUpgrades{
 	grid-column: 1/2;
 }
 
-.turretedLimo, .carRepair{
-	display: grid;
-	grid-template-columns: 40% 60%;
-	grid-template-rows: 1fr;
-	padding: 7vh 0 7vh 10vh;
+.sumValue{
+	grid-column: 2/3;
 }
 
-.fancyOffers div img{
-	height: 480px;
+.carPrice{
+	grid-column: 1/2;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.carValue{
+	grid-column: 2/3;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.shoppingcart{
+	grid-column: 3/4;
+	grid-row: 1/4;
+	align-self: end;
 	justify-self: center;
 }
 
-.bold{
-	font-weight: bolder;
+.shoppingcart img{
+	width: 80%;
 }
-/*---------------------------------------------------   OFFERS   ---------------------------------------------------*/
 
-/*---------------------------------------------------   DEALER   ---------------------------------------------------*/
-.dealership{
-	text-align: center;
-	font-family: 'News Cycle', sans-serif;
-	padding: 0 0 0 7vh;
-	margin: 0;
-	font-size: 30px;
-	color: #4F4F4F;
+
+
+
+
+.colours{
+	grid-row: 2/3;
 }
-/*---------------------------------------------------   DEALER   ---------------------------------------------------*/
+
+.coloursh3{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.coloursh3 img{
+	height: 100%;
+	width: auto;
+}
+
+.coloursh3 h3{
+	font-size: 25px;
+	margin-top: 2vh;
+	line-height: 25px;
+	margin-bottom: 1vh;
+}
+
+.colours p, .bodykits p{
+	font-size: 20px;
+	margin-top: 2vh;
+}
+
+.bodykit{
+	border-top: #A9A9A9 solid 1px;
+	margin-top: 5vh;
+}
+
+.bodykits{
+	padding-bottom: 3vh;
+	border-bottom: #A9A9A9 solid 1px;
+}
+
+.neutral{
+	margin-top: 0 !important;
+}
+
+.colorGrid{
+	display: grid;
+	grid-template-columns: 81px 81px 81px 81px 230px;
+	grid-template-rows: 74px;
+}
+
+.colorGrid div{
+	height: 74px;
+	width: 74px;
+	padding: 0;
+	margin: 0 6px 0 0;
+}
+
+.colorGrid p{
+	grid-column: 5/6;
+	text-align: right;
+	line-height: 74px;
+	font-size: 20px;
+	align-self: center;
+}
+
+.neutral{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.blackwhite{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+.black{
+	background-color: black;
+}
+
+.white{
+	border: #CFCFCF solid 1px;
+}
+
+.metallic{
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+
+.actualcolors{
+	grid-column: 1/2;
+}
+
+.blue{
+	background-color: #0000ff;
+}
+
+.red{
+	background-color: #ff0000;
+}
+
+.orange{
+	background-color: #ffa500;
+}
+
+.green{
+	background-color: #008000;
+}
+
+.chrome{
+	background-color: #F2F2F2;
+	border: #CFCFCF solid 1px;
+}
+
+.gold{
+	background-color: #D4C786;
+}
+
+.silver{
+	background-color: #F6F6F6;
+}
+
+/*.colorGrid img{*/
+/*	position: absolute;*/
+/*}*/
+
+/*.checkmark{*/
+/*	clip-path: polygon(27% 54%, 40% 67%, 76% 18%, 86% 29%, 40% 89%, 17% 64%);*/
+/*}*/
+
+.bodykitP{
+	align-self: center;
+	line-height: 74px;
+}
+
+
+
+.buynow{
+	width: 435px;
+	height: 57px;
+	border: #707070 solid 2px;
+	margin-top: 3vh;
+	margin-left: 76px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 25px;
+}
+
+.buynow img{
+	height: 50%;
+	width: auto;
+}
+
+
+/*---------------------------------------------------   CHECKBOX   ---------------------------------------------------*/
+
+input[type=checkbox] {
+	position: relative;
+	cursor: pointer;
+}
+input[type=checkbox]:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 74px;
+	height: 74px;
+	background-color: blue;
+	margin: 0;
+	outline: none;
+}
+input[type=checkbox]:checked:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	background-image: url("../images/checkmark.png");
+}
+
+input[type=checkbox]{
+	height: 74px;
+	width: 74px;
+	margin: 0;
+}
+
+input[type=checkbox].black:before{
+	background-color: black;
+	margin: 0;
+	/*border: #CFCFCF solid 1px;*/
+}
+
+input[type=checkbox].white:before{
+	background-color: white;
+	margin: 0;
+	border: #707070 solid 1px;
+}
+
+input[type=checkbox].blue:before{
+	background-color: #0000FF;
+	margin: 0;
+}
+
+input[type=checkbox].red:before{
+	background-color: #FF0000;
+	margin: 0;
+}
+
+input[type=checkbox].orange:before{
+	background-color: orange;
+	margin: 0;
+}
+
+input[type=checkbox].green:before{
+	background-color: green;
+	margin: 0;
+}
+
+input[type=checkbox].chrome:before{
+	background-color: #F2F2F2;
+	margin: 0;
+	/*border: #CFCFCF solid 1px;*/
+}
+
+input[type=checkbox].gold:before{
+	background-color: #D4C786;
+	margin: 0;
+}
+
+input[type=checkbox].silver:before{
+	background-color: #F6F6F6;
+	margin: 0;
+}
+
+label{
+	display: none;
+}
+
+
+
+
+/*---------------------------------------------------   CHECKBOX   ---------------------------------------------------*/
 
 /*---------------------------------------------------   MAPS   ---------------------------------------------------*/
 .map h2{
