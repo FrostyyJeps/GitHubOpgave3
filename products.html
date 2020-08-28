@@ -15,14 +15,14 @@
 
 <body>
     <div class="bfTopMenu">
-        <div class="overlay">
+        <a href="index.html" class="overlay">
             <div class="topbarlogowrap">
                 <h1>Benefactor</h1>
                 <img src="images/bflogoWhite.png" alt="BenefactorLogo">
             </div>
             <div class="line1"></div>
             <div class="line2"></div>
-        </div>
+        </a>
     </div>
 
     <div class="bfSideMenu">
@@ -40,10 +40,10 @@
             <img class="phoneIcon bot" src="images/iconPhoneOutline.png" alt="BenefactorLogo">
 
 
-            <p class="homeLine">Home</p>
-            <p class="bookLine">Models</p>
-            <p class="wrenchLine">Book service</p>
-            <p class="phoneLine">Contact us</p>
+            <a href="index.html" class="homeLine">Home</a>
+            <a href="#" class="bookLine">Models</a>
+            <a href="#" class="wrenchLine">Book service</a>
+            <a href="#contactSection" class="phoneLine">Contact us</a>
 
         </div>
     </div>
@@ -60,7 +60,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
  
@@ -71,7 +71,7 @@
                 </div>
  
                 <a href="#" class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </a>
             </div>
  
@@ -82,7 +82,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
  
@@ -93,7 +93,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
  
@@ -104,7 +104,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
  
@@ -115,7 +115,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -137,7 +137,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -148,7 +148,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -159,7 +159,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -170,7 +170,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -181,7 +181,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -192,7 +192,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -203,7 +203,7 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
 
@@ -214,12 +214,11 @@
                 </div>
  
                 <div class="botBox">
-                    <h3>Build your Benefactor</h3>
+                    <h5>Build your Benefactor</h5>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="map">
 
@@ -235,11 +234,58 @@
 
     <hr class="bottomHR">
 
+    <div class="footer" id="contactSection">
+        <h1>Benefactor Premium Car Dealership</h1>
+        <div>
+            <h2>Contact us:</h2>
+            <h2>Links:</h2>
+            <p>611-555-0120</p>
+            <a href="#">-  Find dealership</a>
+            <p>420-Benefactor-069</p>
+            <a href="#">-  Career</a>
+            <p></p>
+            <a id="aboutmeclass" href="#">-  Leasing</a>
+            <p></p>
+            <a href="#">-  Book test drive</a>
+            <p></p>
+            <a href="#">-  Road assistance</a>
+        </div>
+    </div>
 
-
+    <div class="spacer">
+        <img class="carAnimate" src="images/iconCar.png" alt="car">
+        <img class="carAnimate2" src="images/iconCar.png" alt="car">
+        <img class="carCrashimate" src="images/iconCarCrash.png" alt="car">
+        <img class="road" src="images/road.png" alt="car">
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+
+        $(window).scroll(function(){
+            inViewport();
+        });
+
+        $(window).resize(function(){
+            inViewport();
+        });
+
+        function inViewport(){
+            $('#aboutmeclass').each(function(){
+                let divPos = $(this).offset().top,
+                    topOfWindow = $(window).scrollTop();
+
+                if( divPos < topOfWindow+800 ){
+                    $(".carAnimate").addClass('animateMeNow');
+                    $(".carAnimate2").addClass('animateMeNow1');
+                    $(".carCrashimate").addClass("carcrash");
+                }else{
+                    $(".carAnimate").removeClass("animateMeNow");
+                    $(".carAnimate2").removeClass("animateMeNow1")
+                    $(".carCrashimate").removeClass("carcrash")
+                }
+            });
+        }
 
         let bfSideMenu = $(".bfSideMenu");
         let bfSideMenuOverlay = $(".bfSideMenu .overlay");
@@ -251,14 +297,13 @@
             $(bfSideMenuOverlay).css({
                 "grid-template-columns": "7vh, 38vh",
                 "color": "white",
-                // "background-color": "rgba(0, 0, 0, 0.8)"
             })
 
             $(bfSideMenuOverlay).css({
                 "background-color": "rgba(0, 0, 0, 0.8)"
             })
 
-            $(".overlay p").css({
+            $(".overlay a").css({
                 "display": "block"
             })
         })
