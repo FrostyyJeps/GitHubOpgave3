@@ -52,16 +52,18 @@
     <div class="product">
         <h1>Schafter</h1>
 
-        <div class="schafterWrap"></div>
+        <div class="schafterWrap">
+            <img src="images/Schafter_Black.png" alt="schafter">
+        </div>
 
         <div class="customization">
             <div class="cashBit">
                 <p class="totalsum">Total Sum:</p>
-                <p class="totalSumValue">noice</p>
+                <p class="totalSumValue" id="totalSumValue">$ 208,000 USD</p>
                 <p class="sumUpgrades">Sum of upgrades:</p>
-                <p class="sumValue"> cheapskate</p>
+                <p class="sumValue"> $ 0 USD</p>
                 <p class="carPrice">Base price:</p>
-                <p class="carValue">$ 208,000 USD</p>
+                <p class="carValue">$ 208.000 USD</p>
                 
                 <a class="shoppingcart" href="#"><img src="images/shoppingcart.png" alt="cart"></a>
             </div>
@@ -77,28 +79,54 @@
                 <p class="neutral">Neutral</p>
 
                 <div class="colorGrid blackwhite" >
-                    <div class="black"></div>
-                    <div class="white"></div>
+<!--                    <div class="black"></div>-->
+                    <input type="checkbox" class="black" id="black" checked>
+                    <label for="black" class="css-label"></label>
+<!--                    <div class="white"></div>-->
+                    <input type="checkbox" class="white" id="white">
+                    <label for="white" class="css-label"></label>
                     <p>Free</p>
                 </div>
 
                 <p class="metallic">Metallic</p>
 
                 <div class="colorGrid actualcolors">
-                    <div class="blue"></div>
-                    <div class="red"></div>
-                    <div class="orange"></div>
-                    <div class="green"></div>
+<!--                    <div class="blue"></div>-->
+                    <input type="checkbox" class="blue" id="blue">
+                    <label for="blue" class="css-label"></label>
+<!--                    <div class="red"></div>-->
+                    <input type="checkbox" class="red" id="red">
+                    <label for="red" class="css-label"></label>
+<!--                    <div class="orange"></div>-->
+                    <input type="checkbox" class="orange" id="orange">
+                    <label for="orange" class="css-label"></label>
+<!--                    <div class="green"></div>-->
+                    <input type="checkbox" class="green" id="green">
+                    <label for="green" class="css-label"></label>
                     <p>$ 2,500 USD</p>
                 </div>
 
                 <p class="specialCol">Special colors</p>
 
+<!--                <div class="colorGrid specialcolors">-->
+<!--                    <div class="chrome"></div>-->
+<!--                    <div class="gold"></div>-->
+<!--                    <div class="silver"></div>-->
+<!--                    <p>$ 25,000 USD</p>-->
+<!--                </div>-->
+
+
                 <div class="colorGrid specialcolors">
-                    <div class="chrome"></div>
-                    <div class="gold"></div>
-                    <div class="silver"></div>
-                    <p>$ 25,000 USD</p>
+                    <input type="checkbox" class="chrome" id="chrome">
+                    <label for="chrome" class="css-label"></label>
+
+                    <input type="checkbox" class="gold" id="gold">
+                    <label for="gold" class="css-label"></label>
+
+                    <input type="checkbox" class="silver" id="silver">
+                    <label for="silver" class="css-label"></label>
+
+                    <p id="specialcolorprice">$ 25,000 USD</p>
                 </div>
 
             </div>
@@ -225,6 +253,144 @@
         $("#bodykitID").click(function (){
             $(".bodykits").slideToggle();
         });
+
+
+
+
+        $('#black').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+
+        $('#white').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_white.png");
+                $$.prop("checked", true)
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+        $('#blue').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_blue.png");
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+        $('#red').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_red.png");
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+        $('#orange').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_orange.png");
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+        $('#green').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_green.png");
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            }
+        });
+
+        $('#chrome').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_chrome.png");
+                specialColourPlus()
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+        });
+
+        $('#gold').on('click', function(){
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_gold.png");
+                specialColourPlus()
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+        });
+
+        $('#silver').on('click', function(){
+
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_silver.png");
+                // $(".totalSumValue").text('$ 233,000 USD');
+                // $(".").text('$ 233,000 USD');
+                specialColourPlus()
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+        });
+
+        function specialColourPlus() {
+            let p = document.getElementById('specialcolorprice');
+            let pp = document.getElementById('totalSumValue');
+            let n1 = p.innerHTML.match(/\d+/g);     // Get numbers from element's content.
+            let n2 = pp.innerHTML.match(/\d+/g);     // Get numbers from element's content.
+
+            let n12 = parseInt(n1);
+            let n22 = parseFloat(n2);
+            let n3 = n12 + n22;
+
+            $(".totalSumValue").text("$ " + n3 + ",000" + " USD")
+        }
+
+        function specialColourMinus() {
+            let p = document.getElementById('specialcolorprice');
+            let pp = document.getElementById('totalSumValue');
+            let n1 = p.innerHTML.match(/\d+/g);     // Get numbers from element's content.
+            let n2 = pp.innerHTML.match(/\d+/g);     // Get numbers from element's content.
+
+            let n12 = parseInt(n1);
+            let n22 = parseFloat(n2);
+            let n3 =  n22 - n12;
+
+            $(".totalSumValue").text("$ " + n3 + ",000" + " USD")
+        }
+
+        // $('.colorGrid input[type=checkbox]').on('click', function(){
+        //     let $$ = $(this)
+        //     if( $$.is(':checked')){
+        //
+        //     } else {
+        //
+        //     }
+        // });
+
+
+
+        $('.colorGrid input:checkbox').click(function() {
+            $('.colorGrid input:checkbox').not(this).prop('checked', false);
+        });
+
+
 
         // let white = $(".white");
         // let black = $(".black");
