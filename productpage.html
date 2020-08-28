@@ -63,9 +63,9 @@
                 <p class="sumUpgrades">Sum of upgrades:</p>
                 <p class="sumValue"> $ 0 USD</p>
                 <p class="carPrice">Base price:</p>
-                <p class="carValue">$ 208.000 USD</p>
+                <p class="carValue" data-price="208000">$ 208.000 USD</p>
                 
-                <a class="shoppingcart" href="#"><img src="images/shoppingcart.png" alt="cart"></a>
+                <a class="shoppingcart" href="checkout.html"><img src="images/shoppingcart.png" alt="cart"></a>
             </div>
 
             <div class="coloursh3" id="colourID">
@@ -85,7 +85,7 @@
 <!--                    <div class="white"></div>-->
                     <input type="checkbox" class="white" id="white">
                     <label for="white" class="css-label"></label>
-                    <p>Free</p>
+                    <p id="neutalcolorprice" data-price="0">Free</p>
                 </div>
 
                 <p class="metallic">Metallic</p>
@@ -103,18 +103,10 @@
 <!--                    <div class="green"></div>-->
                     <input type="checkbox" class="green" id="green">
                     <label for="green" class="css-label"></label>
-                    <p>$ 2,500 USD</p>
+                    <p id="actualPrice" data-price="2500">$ 2,500 USD</p>
                 </div>
 
                 <p class="specialCol">Special colors</p>
-
-<!--                <div class="colorGrid specialcolors">-->
-<!--                    <div class="chrome"></div>-->
-<!--                    <div class="gold"></div>-->
-<!--                    <div class="silver"></div>-->
-<!--                    <p>$ 25,000 USD</p>-->
-<!--                </div>-->
-
 
                 <div class="colorGrid specialcolors">
                     <input type="checkbox" class="chrome" id="chrome">
@@ -126,7 +118,7 @@
                     <input type="checkbox" class="silver" id="silver">
                     <label for="silver" class="css-label"></label>
 
-                    <p id="specialcolorprice">$ 25,000 USD</p>
+                    <p id="specialcolorprice" data-price="25000">$ 25,000 USD</p>
                 </div>
 
             </div>
@@ -141,22 +133,25 @@
                 <p class="specialCol">Standard Package</p>
 
                 <div class="colorGrid">
-                    <div class="white"></div>
-                    <p class="bodykitP">Free</p>
+                    <input type="checkbox" class="white" id="standardkit" checked>
+                    <label for="standardkit" class="css-label"></label>
+                    <p class="bodykitP" id="standardkitprice" data-price="0">Free</p>
                 </div>
 
                 <p class="specialCol">Sports Package</p>
 
                 <div class="colorGrid">
-                    <div class="white"></div>
-                    <p class="bodykitP">$ 20,000 USD</p>
+                    <input type="checkbox" class="white" id="sportskit">
+                    <label for="sportskit" class="css-label"></label>
+                    <p class="bodykitP" id="sportskitprice" data-price="20000">$ 20,000 USD</p>
                 </div>
 
                 <p class="specialCol">Armored Package</p>
 
                 <div class="colorGrid">
-                    <div class="white"></div>
-                    <p class="bodykitP">$ 75,000 USD</p>
+                    <input type="checkbox" class="white" id="armorkit">
+                    <label for="armorkit" class="css-label"></label>
+                    <p class="bodykitP" id="armorkitprice" data-price="75000">$ 75,000 USD</p>
                 </div>
 
             </div>
@@ -254,63 +249,167 @@
             $(".bodykits").slideToggle();
         });
 
+        $('#standardkit').on('click', function(){
+
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+        });
+
+        $('#sportskit').on('click', function(){
+
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+                specialColourPlus()
+            } else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+        });
+
+        $('#armorkit').on('click', function(){
+
+            let $$ = $(this)
+            if( $$.is(':checked')){
+                $(".schafterWrap img").attr("src", "images/Schafter_Armored.png");
+                specialColourPlus();
+                $(".colours").slideToggle()
+            }
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus();
+                $(".colours").slideToggle()
+            }
+        });
+
 
 
 
         $('#black').on('click', function(){
             let $$ = $(this)
+
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
             }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+                specialColourPlus()
+            }
+
+            // else {
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
 
         $('#white').on('click', function(){
             let $$ = $(this)
-            if( $$.is(':checked')){
+            if( $$.is(':checked') ){
                 $(".schafterWrap img").attr("src", "images/Schafter_white.png");
-                $$.prop("checked", true)
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
+                // $$.prop("checked", true)
             }
+
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_white.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#blue').on('click', function(){
             let $$ = $(this)
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_blue.png");
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
             }
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Blå.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#red').on('click', function(){
             let $$ = $(this)
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_red.png");
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
             }
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_red.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#orange').on('click', function(){
             let $$ = $(this)
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_orange.png");
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
             }
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_orange.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#green').on('click', function(){
             let $$ = $(this)
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_green.png");
-            } else {
-                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourPlus()
             }
+            else {
+                $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
+                specialColourMinus()
+            }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_green.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#chrome').on('click', function(){
@@ -318,10 +417,19 @@
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_chrome.png");
                 specialColourPlus()
-            } else {
+            }
+            else {
                 $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
                 specialColourMinus()
             }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_chrome.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#gold').on('click', function(){
@@ -329,10 +437,19 @@
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_gold.png");
                 specialColourPlus()
-            } else {
+            }
+            else {
                 $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
                 specialColourMinus()
             }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_gold.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         $('#silver').on('click', function(){
@@ -343,51 +460,242 @@
                 // $(".totalSumValue").text('$ 233,000 USD');
                 // $(".").text('$ 233,000 USD');
                 specialColourPlus()
-            } else {
+            }
+            else {
                 $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
                 specialColourMinus()
             }
+            if( $$.is(':checked') && $("#sportskit").is(":checked")){
+                $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_silver.png");
+                specialColourPlus()
+            }
+            // else{
+            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
+            //     specialColourMinus()
+            // }
         });
 
         function specialColourPlus() {
-            let p = document.getElementById('specialcolorprice');
-            let pp = document.getElementById('totalSumValue');
-            let n1 = p.innerHTML.match(/\d+/g);     // Get numbers from element's content.
-            let n2 = pp.innerHTML.match(/\d+/g);     // Get numbers from element's content.
 
-            let n12 = parseInt(n1);
-            let n22 = parseFloat(n2);
-            let n3 = n12 + n22;
+            let neutral = $("#neutalcolorprice").data("price");
+            let actual = $("#actualPrice").data("price");
+            let p = $('#specialcolorprice').data("price");
 
-            $(".totalSumValue").text("$ " + n3 + ",000" + " USD")
+            let carValue = $('.carValue').data("price");
+
+            let standard = $("#standardkitprice").data("price");
+            let sport = $("#sportskitprice").data("price");
+            let armor = $("#armorkitprice").data("price");
+
+            let standardkit = $("#standardkit");
+            let sportkit = $("#sportskit");
+            let armorkit = $("#armorkit");
+
+            let blackwhite = $(".blackwhite input[type=checkbox]");
+            let actualcol = $(".actualcolors input[type=checkbox]");
+            let specialcol = $(".specialcolors input[type=checkbox]");
+
+            let TotalSumValue = $(".totalSumValue");
+            let sumUpgrade = $(".sumValue");
+
+            if( standardkit.is(':checked') ){
+
+                let ppp = carValue + standard + neutral;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = standard + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( sportkit.is(":checked") ){
+
+                let ppp = carValue + sport + neutral;
+                let totalPrice = ppp.toLocaleString("en");
+
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = sport + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( armorkit.is(':checked') ){
+
+                let ppp = carValue + armor + neutral;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = armor + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( actualcol.is(":checked") ){
+
+                let ppp = carValue + actual;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = actual + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( specialcol.is(":checked") ){
+
+                let ppp = carValue + p;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = p + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+
+            if( standardkit.is(':checked') && blackwhite.is(":checked") ){
+
+                let ppp = carValue + standard + neutral;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = standard + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+
+            }
+
+            if( sportkit.is(":checked")  && blackwhite.is(":checked") ){
+
+                let ppp = carValue + sport + neutral;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = sport + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( armorkit.is(':checked') && blackwhite.is(":checked") ){
+
+                let ppp = carValue + armor + neutral;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = armor + neutral;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+
+
+
+            if( standardkit.is(':checked') && actualcol.is(":checked") ){
+
+                let ppp = carValue + standard + actual;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = standard + actual;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( sportkit.is(":checked")  && actualcol.is(":checked") ){
+
+                let ppp = carValue + sport + actual;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = sport + actual;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( armorkit.is(':checked') && actualcol.is(":checked") ){
+
+                let ppp = carValue + armor + actual;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = armor + actual;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+
+
+            if( standardkit.is(':checked') && specialcol.is(":checked") ){
+
+                let ppp = carValue + standard + p;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = standard + p;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( sportkit.is(":checked")  && specialcol.is(":checked") ){
+
+                let ppp = carValue + sport + p;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = sport + p;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
+            if( armorkit.is(':checked') && specialcol.is(":checked") ){
+
+                let ppp = carValue + armor + p;
+
+                let totalPrice = ppp.toLocaleString("en");
+                TotalSumValue.text("$ " + totalPrice + " USD")
+
+                let sum = armor + p;
+                let sumTotal = sum.toLocaleString("en");
+                sumUpgrade.text("$ " + sumTotal + " USD")
+            }
+
         }
 
         function specialColourMinus() {
-            let p = document.getElementById('specialcolorprice');
-            let pp = document.getElementById('totalSumValue');
-            let n1 = p.innerHTML.match(/\d+/g);     // Get numbers from element's content.
-            let n2 = pp.innerHTML.match(/\d+/g);     // Get numbers from element's content.
+            let carprice = $('.carValue').data("price");
+            let totalPrice = carprice.toLocaleString("en");
+            let sumzero = 0;
 
-            let n12 = parseInt(n1);
-            let n22 = parseFloat(n2);
-            let n3 =  n22 - n12;
 
-            $(".totalSumValue").text("$ " + n3 + ",000" + " USD")
+            $(".totalSumValue").text("$ " + totalPrice + " USD")
+            $(".sumValue").text("$ " + sumzero + " USD")
+
         }
 
-        // $('.colorGrid input[type=checkbox]').on('click', function(){
-        //     let $$ = $(this)
-        //     if( $$.is(':checked')){
-        //
-        //     } else {
-        //
-        //     }
-        // });
 
+        let colGrid = $('.colours .colorGrid input[type=checkbox]');
+        let kitGrid = $(".bodykits .colorGrid input[type=checkbox]");
 
+        colGrid.click(function() {
+            colGrid.not(this).prop('checked', false);
+        });
 
-        $('.colorGrid input:checkbox').click(function() {
-            $('.colorGrid input:checkbox').not(this).prop('checked', false);
+        kitGrid.click(function() {
+            kitGrid.not(this).prop('checked', false);
         });
 
 

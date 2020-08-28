@@ -208,10 +208,6 @@ img {
 	height: 647px;
 }
 
-.schafterWrap img{
-	object-position:;
-}
-
 .customization{
 	grid-column: 2/3;
 	grid-row: 1/8;
@@ -426,11 +422,17 @@ img {
 	align-items: center;
 	justify-content: center;
 	padding-right: 25px;
+	text-decoration: none;
+	color: #232323;
 }
 
 .buynow img{
 	height: 50%;
 	width: auto;
+}
+
+.buynow:hover{
+	color: orange;
 }
 
 
