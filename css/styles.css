@@ -393,6 +393,11 @@ img {
 	justify-self: center;
 }
 
+.flippyBoi {
+	transform: scaleX(-1);
+	z-index: -1;
+}
+
 .bold{
 	font-weight: bolder;
 }
