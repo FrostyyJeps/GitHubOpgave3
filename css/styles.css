@@ -1,4 +1,4 @@
-* { 
+*{ 
     box-sizing: border-box; 
 }
 
@@ -160,7 +160,6 @@ img {
 	color: orange;
 	pointer-events: none;
 	font-family: 'Open Sans', sans-serif;
-
 }
 
 .homeLine{
