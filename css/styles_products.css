@@ -38,13 +38,15 @@ img {
 	height: 7vh;
 	position: fixed;
 	background-image: url("../images/topbarBG.png");
-	/*background-image: url("../images/bflogoWhite.png");*/
+	z-index: 3;
 }
 
 .overlay{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	font-family: 'News Cycle', sans-serif;
 }
 
 .topbarlogowrap{
@@ -146,7 +148,7 @@ img {
 .overlay a{
 	display: none;
 	font-size: 3rem;
-	font-family: "Open Sans Light", serif;
+	font-family: 'News Cycle', sans-serif;
 	font-weight: lighter;
 	text-decoration: none;
 	color: white;
@@ -159,8 +161,7 @@ img {
 .overlay a:hover{
 	color: orange;
 	pointer-events: none;
-	font-family: 'Open Sans', sans-serif;
-
+	font-family: 'News Cycle', sans-serif;
 }
 
 .homeLine{
@@ -202,7 +203,6 @@ img {
 
 .schafterWrap{
 	grid-row: 2/3;
-	/*background-image: url("../images/Schafter_Black.png");*/
 	background-position: center;
 	width: 1150px;
 	height: 647px;
@@ -211,7 +211,6 @@ img {
 .customization{
 	grid-column: 2/3;
 	grid-row: 1/8;
-	/*display: grid;*/
 	font-family: 'News Cycle', sans-serif;
 	padding: 59px;
 }
@@ -241,7 +240,6 @@ img {
 .totalSumValue{
 	grid-column: 2/3;
 	font-size: 22px;
-	/*padding-right: 5vw;*/
 	border-bottom: #A9A9A9 solid 1px;
 }
 
@@ -397,13 +395,6 @@ img {
 	background-color: #F6F6F6;
 }
 
-/*.colorGrid img{*/
-/*	position: absolute;*/
-/*}*/
-
-/*.checkmark{*/
-/*	clip-path: polygon(27% 54%, 40% 67%, 76% 18%, 86% 29%, 40% 89%, 17% 64%);*/
-/*}*/
 
 .bodykitP{
 	align-self: center;
@@ -442,6 +433,7 @@ input[type=checkbox] {
 	position: relative;
 	cursor: pointer;
 }
+
 input[type=checkbox]:before {
 	content: "";
 	display: block;
@@ -452,13 +444,13 @@ input[type=checkbox]:before {
 	margin: 0;
 	outline: none;
 }
+
 input[type=checkbox]:checked:after {
 	content: "";
 	display: block;
 	width: 100%;
 	height: 100%;
 	position: absolute;
-
 	background-image: url("../images/checkmark.png");
 }
 
@@ -471,7 +463,6 @@ input[type=checkbox]{
 input[type=checkbox].black:before{
 	background-color: black;
 	margin: 0;
-	/*border: #CFCFCF solid 1px;*/
 }
 
 input[type=checkbox].white:before{
@@ -503,7 +494,6 @@ input[type=checkbox].green:before{
 input[type=checkbox].chrome:before{
 	background-color: #F2F2F2;
 	margin: 0;
-	/*border: #CFCFCF solid 1px;*/
 }
 
 input[type=checkbox].gold:before{
@@ -586,7 +576,6 @@ label{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(6, 1fr);
-	/*height: 40vh;*/
 	margin-left: 25%;
 	width: 70%;
 	margin-top: 3vh;
@@ -699,19 +688,3 @@ label{
 		opacity: 1;
 	}
 }
-/*---------------------------------------------------   FOOTER   ---------------------------------------------------*/
-
-
-/*.spacerrr{*/
-/*	height: 10vh;*/
-/*}*/
-
-
-
-
-
-
-
-
-
-

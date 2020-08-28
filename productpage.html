@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Benefactor</title>
+    <title>Build Your Benefactor - Schafter</title>
     <meta name="robots" content="All">
     <meta name="author" content="Daniel & Halfdan // MMD Nyk F. 2020">
     <meta name="copyright" content="Nej.">
@@ -14,19 +14,18 @@
 
 <body>
     <div class="bfTopMenu">
-        <div class="overlay">
+        <a href="index.html" class="overlay">
             <div class="topbarlogowrap">
                 <h1>Benefactor</h1>
                 <img src="images/bflogoWhite.png" alt="BenefactorLogo">
             </div>
             <div class="line1"></div>
             <div class="line2"></div>
-        </div>
+        </a>
     </div>
 
     <div class="bfSideMenu">
         <div class="overlay">
-<!--            <div class="space"></div>-->
             <img class="homeIcon top" src="images/iconHome.png" alt="BenefactorLogo">
             <img class="homeIcon bot" src="images/iconHomeOutline.png" alt="BenefactorLogo">
 
@@ -41,7 +40,7 @@
 
 
             <a href="index.html" class="homeLine">Home</a>
-            <a href="productpage.html" class="bookLine">Models</a>
+            <a href="products.html" class="bookLine">Models</a>
             <a href="#" class="wrenchLine">Book service</a>
             <a href="#contactSection" class="phoneLine">Contact us</a>
 
@@ -50,7 +49,7 @@
     </div>
 
     <div class="product">
-        <h1>Schafter</h1>
+        <h1>Schafter LWB</h1>
 
         <div class="schafterWrap">
             <img src="images/Schafter_Black.png" alt="schafter">
@@ -74,15 +73,12 @@
             </div>
 
             <div class="colours">
-<!--                <h3>Colors</h3>-->
 
                 <p class="neutral">Neutral</p>
 
                 <div class="colorGrid blackwhite" >
-<!--                    <div class="black"></div>-->
                     <input type="checkbox" class="black" id="black" checked>
                     <label for="black" class="css-label"></label>
-<!--                    <div class="white"></div>-->
                     <input type="checkbox" class="white" id="white">
                     <label for="white" class="css-label"></label>
                     <p id="neutalcolorprice" data-price="0">Free</p>
@@ -91,16 +87,12 @@
                 <p class="metallic">Metallic</p>
 
                 <div class="colorGrid actualcolors">
-<!--                    <div class="blue"></div>-->
                     <input type="checkbox" class="blue" id="blue">
                     <label for="blue" class="css-label"></label>
-<!--                    <div class="red"></div>-->
                     <input type="checkbox" class="red" id="red">
                     <label for="red" class="css-label"></label>
-<!--                    <div class="orange"></div>-->
                     <input type="checkbox" class="orange" id="orange">
                     <label for="orange" class="css-label"></label>
-<!--                    <div class="green"></div>-->
                     <input type="checkbox" class="green" id="green">
                     <label for="green" class="css-label"></label>
                     <p id="actualPrice" data-price="2500">$ 2,500 USD</p>
@@ -198,9 +190,6 @@
             <p></p>
             <a href="#">-  Road assistance</a>
         </div>
-<!--        <div class="spacer">-->
-
-<!--        </div>-->
     </div>
 
     <div class="spacer">
@@ -211,7 +200,6 @@
 
     </div>
 
-<!--    <div class="spacerrr"></div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
@@ -302,11 +290,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
                 specialColourPlus()
             }
-
-            // else {
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
 
@@ -326,10 +309,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_white.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#blue').on('click', function(){
@@ -346,10 +325,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Blå.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#red').on('click', function(){
@@ -366,10 +341,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_red.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#orange').on('click', function(){
@@ -385,11 +356,7 @@
             if( $$.is(':checked') && $("#sportskit").is(":checked")){
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_orange.png");
                 specialColourPlus()
-            }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
+            }specialColourMinus()
         });
 
         $('#green').on('click', function(){
@@ -406,10 +373,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_green.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#chrome').on('click', function(){
@@ -426,10 +389,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_chrome.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#gold').on('click', function(){
@@ -446,10 +405,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_gold.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         $('#silver').on('click', function(){
@@ -457,8 +412,6 @@
             let $$ = $(this)
             if( $$.is(':checked')){
                 $(".schafterWrap img").attr("src", "images/Schafter_silver.png");
-                // $(".totalSumValue").text('$ 233,000 USD');
-                // $(".").text('$ 233,000 USD');
                 specialColourPlus()
             }
             else {
@@ -469,10 +422,6 @@
                 $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_silver.png");
                 specialColourPlus()
             }
-            // else{
-            //     $(".schafterWrap img").attr("src", "images/Schafter_Bodykit_Black.png");
-            //     specialColourMinus()
-            // }
         });
 
         function specialColourPlus() {
@@ -699,57 +648,6 @@
         });
 
 
-
-        // let white = $(".white");
-        // let black = $(".black");
-        // let blue = $(".blue");
-        // let red = $(".red");
-        // let orange = $(".orange");
-        // let green = $(".green");
-        //
-        //
-        //
-        // $(white).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        // $(black).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        // $(blue).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        // $(red).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        // $(orange).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        // $(green).mouseenter(function (){
-        //     $(this).addClass("checkmark");
-        // })
-        //
-        // $(white).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-        // $(black).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-        // $(blue).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-        // $(red).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-        // $(orange).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-        // $(green).mouseleave(function (){
-        //     $(this).removeClass("checkmark");
-        // })
-
-
-
-
         let bfSideMenu = $(".bfSideMenu");
         let bfSideMenuOverlay = $(".bfSideMenu .overlay");
 
@@ -779,15 +677,6 @@
                 "background-color": "rgba(0, 0, 0, 0.5)"
             })
         })
-
-        // $(".carAnimate").animate({
-        //     left: "600px"
-        // }, "slow" )
-
-
-
-
-
 
     </script>
 

@@ -386,7 +386,6 @@ img {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(6, 1fr);
-	/*height: 40vh;*/
 	margin-left: 25%;
 	width: 70%;
 	margin-top: 3vh;
