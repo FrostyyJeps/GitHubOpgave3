@@ -38,13 +38,13 @@ img {
 	height: 7vh;
 	position: fixed;
 	background-image: url("../images/topbarBG.png");
-	/*background-image: url("../images/bflogoWhite.png");*/
 }
 
 .overlay{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
 }
 
 .topbarlogowrap{
@@ -143,11 +143,23 @@ img {
 	grid-row: 5/6;
 }
 
-.overlay p{
-	display: none;
-	font-size: 3rem;
-	font-family: 'Open Sans', sans-serif;
+.overlay a{
+	font-size: 2.5rem;
+	font-family: 'News Cycle', sans-serif;
 	font-weight: lighter;
+	text-decoration: none;
+	color: white;
+}
+
+.overlay a:visited{
+	color: white;
+}
+
+.overlay a:hover{
+	color: orange;
+	pointer-events: none;
+	font-family: 'News Cycle', sans-serif;
+	text-decoration: none;
 }
 
 .homeLine{
@@ -173,7 +185,7 @@ img {
 .models{
 	width: 100%;
 	height: auto;
-	padding: 100px 7vh 0 7vh;
+	padding: 75px 7vh 0 7vh;
 	text-align: center;
 	font-family: 'News Cycle', sans-serif;
 	font-size: 40px;
@@ -191,7 +203,7 @@ img {
 	grid-template-columns: repeat(3, 1fr);
 }
  
-.modelsGrid div h2, h3{
+.modelsGrid div h2, h3, h5{
 	margin: 0;
 	color: white;
 	text-align: left;
@@ -200,12 +212,18 @@ img {
 	font-weight: 500;
 	padding-bottom: 2px;
 }
- 
+
 .modelsGrid div h2 {
 	font-size: 30px;
 	line-height: 30px;
 }
-.modelsGrid div h3{
+
+.modelsGrid div h3 {
+	font-size: 15px;
+	line-height: 15px;
+}
+
+.modelsGrid div h5 {
 	font-size: 15px;
 	line-height: 15px;
 }
@@ -297,11 +315,13 @@ img {
 	text-decoration: none;
 }
 
-.botBox:hover h3 {
-	color: orange;
+.botBox:hover, h5:hover {
+	color: black;
+	pointer-events: none;
+	background-color: orange;
 }
- 
-.botBox h3{
+
+.botBox h3, h5{
 	font-size: 16px;
 	font-weight: 500;
 	align-self: center;
@@ -346,4 +366,135 @@ img {
 .bottomHR {
 	border: solid rgba(0,0,0,0.6) 1px;
 	margin: 60px 200px 40px 200px;
+}
+
+.footer{
+	text-align: center;
+	font-family: 'News Cycle', sans-serif;
+	padding: 0 0 0 7vh;
+	margin: 0;
+	font-size: 25px;
+	color: #4F4F4F;
+}
+
+.footer h2, p, a{
+	text-align: left;
+	font-weight: normal;
+}
+
+.footer div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	/*height: 40vh;*/
+	margin-left: 25%;
+	width: 70%;
+	margin-top: 3vh;
+	padding-bottom: 20vh;
+}
+
+.footer a{
+	display: inline-block;
+	text-decoration: #2E2E2E;
+	color: #2E2E2E;
+}
+
+.footer a:hover{
+	color: blue;
+}
+
+.spacer{
+	position: relative;
+	width: 100%;
+ 	height: 60px;
+	overflow-x: hidden;
+}
+
+.road{
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+
+.carAnimate{
+	position: absolute;
+	height: 60%;
+	top: 30%;
+	left: 75%;
+	opacity: 0;
+}
+
+.carAnimate2{
+	position: absolute;
+	transform: scaleX(-1);
+	height: 60%;
+	top: 5%;
+	right: 10%;
+	opacity: 0;
+}
+
+.animateMeNow{
+	animation: cardrive 4s ease-in;
+	animation-fill-mode: forwards;
+}
+
+.animateMeNow1{
+	animation: cardrive1 4s ease-in;
+	animation-fill-mode: forwards;
+}
+
+.carcrash{
+	animation: carcrash 1.3s ease-in;
+	animation-fill-mode: forwards;
+	animation-delay: 3.7s;
+}
+
+.carCrashimate{
+	position: absolute;
+	height: 70%;
+	top: 20%;
+	right: 19.8%;
+	opacity: 0;
+}
+
+@keyframes cardrive {
+	from{
+		opacity: 1;
+		left: 0;
+	}
+	to{
+		left: 75%;
+		opacity: 1;
+	}
+}
+
+
+@keyframes cardrive1 {
+	0%{
+		opacity: 1;
+		right: -20%;
+	}
+
+	80%{
+		top: 25%;
+	}
+
+	95%{
+		opacity: 1;
+	}
+
+	100%{
+		top: 25%;
+		right: 19%;
+		opacity: 0;
+	}
+}
+
+@keyframes carcrash {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
